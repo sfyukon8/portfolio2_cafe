@@ -1,0 +1,15 @@
+色手帳
+
+https://www.maruyamacoffee.com/
+
+body 文字　#25292b
+body hover #f1f9a4
+background 白　#f8f7f5
+
+header
+background-color: rgba(58, 64, 70, 0.8);
+
+
+#menu_list li img 　お知らせボタン
+ #62767f;
+

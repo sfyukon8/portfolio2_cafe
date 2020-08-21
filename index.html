@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="150字の紹介文記載＊">
+  <!--  <meta name="keywords" content="@@@,@@@,@@@,@@@,@@@">-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:200,300,400,500&display=swap&subset=japanese" rel="stylesheet">
+  <title>カフェ軒下(Cafe Nokishita) | 本所吾妻橋の本格焙煎珈琲カフェ</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+  <link rel="shortcut icon" href="images/ico/favicon.ico">
+
+  <!--  jquery------->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <!--スライダー-->
+  <script src="/jquery.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.slider').bxSlider({
+        auto: true,
+        pause: 4000,
+        pager: false,
+        controls: false,
+        mode: 'fade'
+      });
+    });
+    //    <!--スライダー-->
+
+    //    スクロール
+    $(function() {
+      $('a[href^="#"]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({
+          scrollTop: position
+        }, speed, "swing");
+        return false;
+      });
+    });
+    //    スクロール
+
+    //    トップへスクロール
+    $(function(jQuery) {
+      $(".pagetop").hide();
+      $('body').append(
+        $('<div class=".pagetop">')
+        .append(
+          $('<a href="#page"> </a>')
+          .click(function() {
+            $('html,body').animate({
+              scrollTop: 0
+            }, 'fast');
+            return false
+          })
+        )
+      );
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+          $('.pagetop').fadeIn();
+        } else {
+          $('.pagetop').fadeOut();
+        }
+      });
+    });
+
+    //    //    toogle出現
+    //    これ参照：https://deshinon.com/2019/03/03/osyare-humbergermenu-css/
+    //    スピード感２
+    $(".menu-toggle").on('click', function() {
+      $(this).toggleClass("on");
+      $('.menu-section').toggleClass("on");
+      $("nav ul").toggleClass('hidden');
+    });
+  </script>
+</head>
+
+
+
+<body>
+  <div id=wrapper>
+    <div id="page">
+      <header id="header">
+        <!--    画面いっぱいに広がるようにしたいのでWrapperなどではかこまない-->
+
+        <div class="inner-header">
+          <h1> カフェ軒下</h1>
+
+          <!--  nav------>
+          <div class="menu-section">
+            <div class="menu-toggle">
+              <div class="one"></div>
+              <div class="two"></div>
+              <div class="three"></div>
+            </div>
+            <nav id="gnav">
+              <ul role="navigation" class="hidden">
+                <li><a href="#1">当店のこだわり</a></li>
+                <li><a href="#2">メニュー</a></li>
+                <li><a href="#3">お知らせ</a></li>
+                <li><a href="#4">アクセス</a></li>
+              </ul>
+            </nav>
+            <!--            <span class="fa fa-bars menu-icon"></span>-->
+            <!--      nav-------->
+          </div>
+          <!--        menu-section-->
+
+        </div>
+        <!--    inner-header------>
+
+      </header>
+    </div>
+
+    <!--  main_img------->
+    <div class="background_container">
+      <div id="main_img">
+        <ul>
+          <li>
+            <div class="slider">
+              <img src="images/images_added/slide_cafe04.jpg" width="1920" height="800" alt="">
+              <img src="images/images_added/slide_cafe03.jpg" width="1920" height="800" alt="">
+              <img src="images/images_added/slide_cafe02.jpg" width="1920" height="800" alt="">
+              <img src="images/images_added/slide_cafe12.jpg" width="1920" height="800" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--  main-img------->
+
+
+      <section id="about">
+        <div id="1">
+          <h2>
+            <span class="is-en">About</span>
+            <span class="is-jp">当店のこだわり</span>
+          </h2>
+        </div>
+
+        <h3>隅田川を眺めながら、爽やかな風に打たれながら。<br>お気に入りのコーヒーとパンを見つけてください。</h3>
+
+        <div class="about_p">
+          <p>カフェ軒下は墨田区の本所吾妻橋の小さなカフェです。<br>私たちのお店では異なる分野の職人が集まってカフェという場所を提供させていただいております。</p>
+          <p>ポートランドの人気カフェでチーフバリスタをしていた近藤さん、神戸のピブグルマン受賞店「パティスリー・コア」の西脇さん、オーガニックベジタブルマイスター農家の志治さん。<br>3人の職人の想いがつまったおもてなしを、ぜひ楽しんでいってください。</p>
+        </div>
+
+      </section>
+      <!--    #about----------->
+
+      <section id="menu">
+        <div class="inner" id="2">
+          <h2>
+            <span class="is-en">Menu</span>
+            <span class="is-jp">メニュー</span>
+          </h2>
+          <ul id="menu_list">
+            <li>
+              <div>
+                <h3>本日のコーヒー</h3>
+                <a href="images/menu_drink01.jpg" class="zoom">
+                  <img src="images/menu_drink01.jpg" width="auto" height="266" alt="">
+                </a>
+                <p>全米No.1コーヒーの聖地ポートランドの有名店でチーフバリスタとして働いていた近藤さんの淹れる一杯。豆も直接買付したものを自家焙煎しています。</p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>日替わりランチプレート</h3>
+                <a href="images/menu_lunch01.jpg" class="zoom">
+                  <img src="images/menu_lunch01.jpg" width="auto" height="266" alt="">
+                </a>
+                <p>千葉の農家さんから直送される朝どれオーガニック野菜をふんだんに使った、日替わりランチプレートもご用意しております。</p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>焼きたて天然酵母パン</h3>
+                <a href="images/images_added/menu_drink06.jpg" class="zoom">
+                  <img src="images/images_added/menu_drink06.jpg" width="auto" height="266" alt="">
+                </a>
+                <p>店内で焼き上げた天然酵母のパン。お持ち帰りも可能です。プレゼント用のラッピングも承っております。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--            inner-------->
+
+
+        <!-- btn -->
+        <div class="box-1">
+          <div class="btn btn-one">
+            <span>全てのメニュー</span>
+          </div>
+        </div>
+        <!-- btn -->
+      </section>
+      <!--#menu----------->
+
+      <!--#news -->
+      <div id="3">
+        <section id="news">
+          <h2>
+            <span class="is-en">News</span>
+            <span class="is-jp">お知らせ</span>
+          </h2>
+
+          <!--#news_content -->
+          <div id="news_wrapper">
+            <div id="news_content">
+              <div class="news_head">
+                <p class="news_date">2020年04月12日</p>
+                <p class="news_label">お知らせ</p>
+              </div>
+              <h3 class="news_title">4月1日からランチメニューにカレーが登場します。</h3>
+
+              <div>
+                <a href="#"><span>詳細を見る</span><i></i></a>
+              </div>
+            </div>
+            <hr>
+
+            <div id="news_content">
+              <div class="news_head">
+                <p class="news_date">2020年04月9日</p>
+                <p class="news_label">お知らせ</p>
+              </div>
+              <h3 class="news_title">前回、販売開始１０分で完売したビーツのキッシュを再販します。</h3>
+
+              <div>
+                <a href="#"><span>詳細を見る</span><i></i></a>
+              </div>
+            </div>
+            <hr>
+
+            <div id="news_content">
+              <div class="news_head">
+                <p class="news_date">2020年04月8日</p>
+                <p class="news_label">お知らせ</p>
+              </div>
+              <h3 class="news_title">テラス席の開放が始まりました。ワンちゃんと一緒にコーヒーはいかがですか？</h3>
+
+              <div>
+                <a href="#"><span>詳細を見る</span><i></i></a>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <!--#news_content -->
+          <!-- btn  https://web-bruno.com/css-hover-design/ -->
+          <div class="box-1">
+            <div class="btn btn-one">
+              <span>お知らせ一覧</span>
+            </div>
+          </div>
+          <!-- btn -->
+
+          <!-- /homeNews -->
+        </section>
+      </div>
+
+      <!--   #event-------->
+      <section id="event">
+        <h2>
+          <span class="is-en">Event / Workshop</span>
+          <span class="is-jp">イベント / ワークショップ</span>
+        </h2>
+
+        <div class="event_wrapper">
+
+          <div class="event_section">
+            <div class="event_image">
+              <div class="event_date">
+                <p>4/18</p>
+                <p>Sat</p>
+              </div>
+              <img src="images/images_added/concept_image.png" width="300" height="300" alt="コーヒー豆の写真">
+            </div>
+
+            <div class="event_content clearfix">
+              <div class="event_head">
+                <p class="event_label">イベント</p>
+                <p class="event_states"><span>終了</span></p>
+              </div>
+              <h3 class=event_title>【開催中止】近藤さんのテクを教えます。珈琲焙煎ワークショップ！</h3>
+              <p class="event_schedule">2020年04月18日</p>
+              <p class="event_place"><i class="fas fa-map-marker-alt"></i>近藤カフェ</p>
+              <div class="event_body">
+                <p>開店１周年を記念して、近藤さんによる焙煎ワークショップを開催します。当日焙煎した豆は無料でお持ち帰りいただけます。
+                </p>
+              </div>
+              <div class="event_detail">
+                <a href="#"><span>詳細を見る</span></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="event_section">
+            <div class="event_image">
+              <div class="event_date">
+                <p>6/13</p>
+                <p>Sat</p>
+              </div>
+              <img src="images/images_added/menu_drink03.jpg" width="300" height=300 alt="コーヒー豆の写真">
+            </div>
+
+            <div class="event_content">
+              <div class="event_head">
+                <p class="event_label">イベント</p>
+                <p class="event_states"><span>受付中</span></p>
+              </div>
+              <h3 class=event_title>人気インスタグラマー@recipnさんによる映えるスイーツフォトワークショップ開催</h3>
+              <p class="event_schedule">2020年06月13日</p>
+              <p class="event_place"><i class="fas fa-map-marker-alt"></i>近藤カフェ</p>
+              <div class="event_body">
+                <p>500万フォロワーを持つ人気インスタグラマー@recipnによるスイーツ写真の撮り方ワークショップを開催します。撮影に使うスイーツは無料でお召し上がりいただけます。
+                </p>
+              </div>
+              <div class="event_detail">
+                <a href="#"><span>詳細を見る</span></a>
+              </div>
+            </div>
+            <!--        event_content-------->
+          </div>
+
+        </div>
+        <!--        event_wrapper-------->
+
+        <!--
+      <div class="event_textLink">
+        <div>
+          <a href="/event/"><span>イベント一覧を見る</span><i></i></a>
+        </div>
+      </div>
+      
+-->
+        <!-- btn -->
+        <div class="box-1">
+          <div class="btn btn-one">
+            <span>イベント一覧</span>
+          </div>
+        </div>
+        <!-- btn -->
+      </section>
+      <!-- #event -->
+      <div id="4">
+        <section id="map">
+          <div class="googleMap">
+            <!--        <＊iframe src="https://snazzymaps.com/embed/231669" width="100%" height="400px" style="border:none;"></iframe>-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5550224617505!2d139.8011106506492!3d35.71256628008966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec4d43d464f%3A0x95fd246fc48bda58!2z44CSMTMxLTAwMzMg5p2x5Lqs6YO95aKo55Sw5Yy65ZCR5bO277yR5LiB55uu77yT!5e0!3m2!1sja!2sjp!4v1586783746116!5m2!1sja!2sjp" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+          </div>
+        </section>
+      </div>
+
+    </div>
+    <!--  wrapper------>
+
+    <footer class="clearfix">
+      <div class="footer_wrapper">
+        <div class="footer_logo">
+          <h2>カフェ軒下</h2>
+        </div>
+        <div class="footer_address">
+          <p><a href="https://goo.gl/maps/RFfEX59cBX2Tu13i6" target="_blank">〒160-0022 東京都新宿区新宿６丁目２８−７</a></p>
+          <p><a href="tel:000-0000-0000">TEL&nbsp;&nbsp;00-0000-0000</a></p>
+          <p>営業時間 11:00 - 19:00&nbsp;&nbsp;&nbsp;&nbsp;定休日:&nbsp;火/水</p>
+        </div>
+        <div class="footer_social">
+          <p class="followus">Follow us on</p>
+          <p><a href="#"><i class="fab fa-facebook-f"></i></a></p>
+          <p><a href="#"><i class="fab fa-twitter"></i></a></p>
+          <p><a href="#"><i class="fab fa-instagram"></i></a></p>
+        </div>
+      </div>
+
+      <div class="pagetop">
+        <a href="#page">&#9651;&nbsp;ページトップへ </a>
+      </div>
+
+      <small>&copy;2020 Kondo Cafe. All Rights Reserved.</small>
+    </footer>
+
+  </div>
+</body></html>
